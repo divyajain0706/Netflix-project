@@ -60,3 +60,8 @@ print("Newest title released in year : ", newest_title)
 country_count = df.groupby("country")["title"].count()
 print("The number of content from each country is :")
 print(country_count)
+
+#Find all movies released in the year of 2020
+year_movies = df[df["release_year"] == 2020]
+print("Movies released in the year of 2020 :")
+print(year_movies)
