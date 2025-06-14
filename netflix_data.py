@@ -76,3 +76,8 @@ movies_df = df[df['type'] == 'Movie']
 movies_df['duration_int'] = movies_df['duration'].str.extract('(\d+)').astype(float)
 long_movies = movies_df[movies_df['duration_int'] > 100]
 print(long_movies[['title', 'duration']])
+
+#Titles with rating "TV-MA" or "R".
+title_rating = df[(df["rating"] == "TV-MA") | (df["rating"] == "R")]
+print("Titles with rating TV-MA or R :")
+print(title_rating["title"])
