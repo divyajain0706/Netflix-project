@@ -25,3 +25,7 @@ print(df.isnull().sum())
 #Checking whether there are duplicate values or not
 print("Duplicate values if any :")
 print(df.duplicated().sum())
+
+#Renaming the date_added column to datetime
+df.rename(columns={'date_added' : 'datetime'}, inplace=True)
+print(df.columns)
