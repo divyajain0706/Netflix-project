@@ -44,3 +44,8 @@ print(df.columns)
 #Displaying the top 5 genres/categories from the dataset
 top_genres = df["genre"].value_counts().head(5)
 print(top_genres)
+
+#Total number of titles released each year
+total_titles = df.groupby("release_year")["title"].count()
+print("Total number of titles released each year :")
+print(total_titles)
