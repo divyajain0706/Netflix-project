@@ -49,3 +49,9 @@ print(top_genres)
 total_titles = df.groupby("release_year")["title"].count()
 print("Total number of titles released each year :")
 print(total_titles)
+
+#Displaying the oldest and newest titles years
+oldest_title = df["release_year"].min()
+newest_title = df["release_year"].max()
+print("Oldest title released in year : ", oldest_title)
+print("Newest title released in year : ", newest_title)
