@@ -36,3 +36,11 @@ total_movies = (df['type'] == 'Movie').sum()
 total_tvshows = (df['type'] == 'TV Show').sum()
 print("Total number of movies :", total_movies)
 print("Total number of TV shows :", total_tvshows)
+
+#Renaming the listed_in column to genre
+df.rename(columns={"listed_in" : "genre"}, inplace=True)
+print(df.columns)
+
+#Displaying the top 5 genres/categories from the dataset
+top_genres = df["genre"].value_counts().head(5)
+print(top_genres)
