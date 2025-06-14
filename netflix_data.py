@@ -70,3 +70,9 @@ print(year_movies["title"])
 genre_content = df[df["genre"] == "Comedies"]
 print("List of content of a Comedy genre :")
 print(genre_content)
+
+#Titles with duration over 100 mins.
+movies_df = df[df['type'] == 'Movie']
+movies_df['duration_int'] = movies_df['duration'].str.extract('(\d+)').astype(float)
+long_movies = movies_df[movies_df['duration_int'] > 100]
+print(long_movies[['title', 'duration']])
