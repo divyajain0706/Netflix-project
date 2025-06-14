@@ -55,3 +55,8 @@ oldest_title = df["release_year"].min()
 newest_title = df["release_year"].max()
 print("Oldest title released in year : ", oldest_title)
 print("Newest title released in year : ", newest_title)
+
+#Count of content from each country.
+country_count = df.groupby("country")["title"].count()
+print("The number of content from each country is :")
+print(country_count)
