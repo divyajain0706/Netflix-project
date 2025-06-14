@@ -14,3 +14,10 @@ print(df.columns)
 
 print("Missing values if any :")
 print(df.isnull().sum())
+
+#Filling the missing values in the director,cast and country columns.
+df['director'] = df['director'].fillna("Unknown")
+df['cast'] = df['cast'].fillna("Cast not listed")
+df['country'] = df['country'].fillna("Unknown Country")
+
+print(df.isnull().sum())
