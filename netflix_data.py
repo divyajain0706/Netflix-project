@@ -21,3 +21,7 @@ df['cast'] = df['cast'].fillna("Cast not listed")
 df['country'] = df['country'].fillna("Unknown Country")
 
 print(df.isnull().sum())
+
+#Checking whether there are duplicate values or not
+print("Duplicate values if any :")
+print(df.duplicated().sum())
