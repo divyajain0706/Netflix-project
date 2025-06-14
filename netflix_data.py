@@ -64,4 +64,9 @@ print(country_count)
 #Find all movies released in the year of 2020
 year_movies = df[df["release_year"] == 2020]
 print("Movies released in the year of 2020 :")
-print(year_movies)
+print(year_movies["title"])
+
+#List all content of a Comedy genre.
+genre_content = df[df["genre"] == "Comedies"]
+print("List of content of a Comedy genre :")
+print(genre_content)
