@@ -29,3 +29,10 @@ print(df.duplicated().sum())
 #Renaming the date_added column to datetime
 df.rename(columns={'date_added' : 'datetime'}, inplace=True)
 print(df.columns)
+
+#Performing Analysis
+#Total count of movies vs TV shows
+total_movies = (df['type'] == 'Movie').sum()
+total_tvshows = (df['type'] == 'TV Show').sum()
+print("Total number of movies :", total_movies)
+print("Total number of TV shows :", total_tvshows)
