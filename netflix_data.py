@@ -81,3 +81,5 @@ print(long_movies[['title', 'duration']])
 title_rating = df[(df["rating"] == "TV-MA") | (df["rating"] == "R")]
 print("Titles with rating TV-MA or R :")
 print(title_rating["title"])
+
+df.to_csv("cleaned_netflix_data.csv", index=False)
