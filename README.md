@@ -19,8 +19,7 @@ This project is a **mini data analysis project** performed using **Python, Panda
   - Genre (listed_in)
   - Description
 
-- [Dataset Source](https://www.kaggle.com/datasets/shivamb/netflix-shows) (You can update this if you downloaded it from somewhere else)
-
+- [Dataset Source](https://www.kaggle.com/datasets/shivamb/netflix-shows) 
 ---
 
 ## 🛠️ Tools & Libraries Used
