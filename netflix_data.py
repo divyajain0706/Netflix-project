@@ -94,3 +94,5 @@ plt.ylabel('Count')
 plt.grid(color = 'lightgrey', linestyle =':',linewidth = 1)
 plt.title('Total count of movies vs TV shows')
 plt.show()
+
+
