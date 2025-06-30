@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np 
+import matplotlib.pyplot as plt
 
 #Loading the CSV file
 df = pd.read_csv(r"D:\Python Programs\pandas programs\Netflix-project\nextflix_data.csv", encoding="latin1")
@@ -83,3 +84,13 @@ print("Titles with rating TV-MA or R :")
 print(title_rating["title"])
 
 df.to_csv("cleaned_netflix_data.csv", index=False)
+
+#Visualizing the insights and trends using matplotlib
+#Visualizing total count of movies vs TV shows
+plt.figure(figsize=(5,3))
+plt.bar(df['type'].value_counts().index, df['type'].value_counts().values,color = 'tomato',width=0.4)
+plt.xlabel('Type')
+plt.ylabel('Count')
+plt.grid(color = 'lightgrey', linestyle =':',linewidth = 1)
+plt.title('Total count of movies vs TV shows')
+plt.show()
