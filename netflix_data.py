@@ -122,5 +122,6 @@ plt.xlabel('Release Year')
 plt.ylabel('Duration (minutes)')
 
 plt.tight_layout()
+plt.savefig("netflix_dashboard.png", dpi=300, bbox_inches='tight')
 plt.show()
 
