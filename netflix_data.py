@@ -101,6 +101,13 @@ plt.title("Top 10 Genres on Netflix")
 plt.xlabel("Genres")
 plt.ylabel("Number of Titles")
 
+#Visualizing the total number of titles released each year
+plt.subplot(2,2,3)
+plt.hist(df['release_year'].dropna(), bins=20, color='lightgreen', edgecolor='black')
+plt.title("Content Released per Year")
+plt.xlabel("Release Year")
+plt.ylabel("Number of Titles")
+
 plt.tight_layout()
 plt.show()
 
