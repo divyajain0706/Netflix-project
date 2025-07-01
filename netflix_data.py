@@ -96,10 +96,12 @@ plt.title('Total count of movies vs TV shows')
 
 #Visualizing the top 5 genres/categories from the dataset
 plt.subplot(2,2,2)
+top_genres.index = [genre.split(',')[0] for genre in top_genres.index]
 plt.bar(top_genres.index, top_genres.values,color = 'skyblue', width = 0.3)
-plt.title("Top 10 Genres on Netflix")
+plt.title("Top 4 Genres on Netflix")
 plt.xlabel("Genres")
 plt.ylabel("Number of Titles")
+plt.xticks(rotation=35, ha='right')
 
 #Visualizing the total number of titles released each year
 plt.subplot(2,2,3)
@@ -107,6 +109,17 @@ plt.hist(df['release_year'].dropna(), bins=20, color='lightgreen', edgecolor='bl
 plt.title("Content Released per Year")
 plt.xlabel("Release Year")
 plt.ylabel("Number of Titles")
+
+#Visualizing whether newer movies tend to be longer or shorter.
+plt.subplot(2,2,4)
+movie_df = df[df['type'] == 'Movie'].copy()
+movie_df['duration'] = movie_df['duration'].str.replace(' min', '').astype(float)
+movie_df['release_year'] = movie_df['release_year'].astype(int)
+
+plt.scatter(movie_df['release_year'], movie_df['duration'], alpha=0.4, color='purple')
+plt.title('Movie Duration vs Release Year')
+plt.xlabel('Release Year')
+plt.ylabel('Duration (minutes)')
 
 plt.tight_layout()
 plt.show()
