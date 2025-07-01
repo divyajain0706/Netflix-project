@@ -86,13 +86,21 @@ print(title_rating["title"])
 df.to_csv("cleaned_netflix_data.csv", index=False)
 
 #Visualizing the insights and trends using matplotlib
-#Visualizing total count of movies vs TV shows
-plt.figure(figsize=(5,3))
-plt.bar(df['type'].value_counts().index, df['type'].value_counts().values,color = 'tomato',width=0.4)
-plt.xlabel('Type')
-plt.ylabel('Count')
-plt.grid(color = 'lightgrey', linestyle =':',linewidth = 1)
-plt.title('Total count of movies vs TV shows')
-plt.show()
+plt.figure(figsize=(15,10))
 
+#Visualizing total count of movies vs TV shows
+plt.subplot(2,2,1)
+type_counts = df['type'].value_counts()
+plt.pie(type_counts, labels=type_counts.index, autopct='%1.1f%%', startangle=140, colors=['#ff9999','#66b3ff'])
+plt.title('Total count of movies vs TV shows')
+
+#Visualizing the top 5 genres/categories from the dataset
+plt.subplot(2,2,2)
+plt.bar(top_genres.index, top_genres.values,color = 'skyblue', width = 0.3)
+plt.title("Top 10 Genres on Netflix")
+plt.xlabel("Genres")
+plt.ylabel("Number of Titles")
+
+plt.tight_layout()
+plt.show()
 
