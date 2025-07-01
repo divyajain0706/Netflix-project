@@ -1,60 +1,32 @@
-# 📺 Netflix Data Analysis Project
+📺 Netflix Data Analysis & Visualization
+This project explores the Netflix dataset using Python, Pandas, and Matplotlib to uncover trends in content type, genre, duration, and release history.
 
-This project is a **mini data analysis project** performed using **Python, Pandas, and NumPy** to explore and understand the structure of a Netflix dataset. It includes various data cleaning steps and analysis to derive insights from the Netflix shows and movies available on the platform.
+📂 Dataset Overview
+Includes details like:
+Title, Type, Country, Release Year, Rating
+Duration, Genre, Date Added, Description
 
----
+📎 Dataset Source (Kaggle)
 
-## 📂 Dataset
+🛠 Tools Used
+Python, Pandas, NumPy, Matplotlib
+VS Code
 
-- The dataset used in this project contains information about Netflix titles including:
-  - Title
-  - Type (Movie or TV Show)
-  - Director
-  - Cast
-  - Country
-  - Date added
-  - Release year
-  - Rating
-  - Duration
-  - Genre (listed_in)
-  - Description
+🔍 What I Did
+Cleaned and preprocessed the dataset
+Analyzed patterns in release trends, genres, durations
+Created a subplot-based dashboard to visualize key insights:
+🎬 Movies vs TV Shows (Pie Chart)
+🎭 Top Genres (Bar Chart)
+📆 Content Released per Year (Histogram)
+⏱ Movie Duration over Time (Scatter Plot)
 
-- [Dataset Source](https://www.kaggle.com/datasets/shivamb/netflix-shows) 
----
+📸 Sample Output
+![Netflix Dashboard](netflix_dashboard.png)
 
-## 🛠️ Tools & Libraries Used
-
-- **Python**
-- **Pandas**
-- **NumPy**
-- **VS Code**
-
----
-
-## 📌 Key Operations Performed
-
-✔️ Data Cleaning:
-- Handled missing/null values  
-- Converted data types (e.g., `date_added` to datetime)  
-- Removed duplicate records  
-
-✔️ Data Analysis & Manipulation:
-- Counted number of movies vs TV shows  
-- Analyzed most frequent directors, countries  
-- Extracted year and month from `date_added`  
-- Searched for specific keywords in `title` and `description`  
-- Sorted and filtered data based on conditions  
-- Grouped data to find trends (e.g., content added per year)
-- Exported cleaned data to a new CSV file
-
----
-
-## 📊 Sample Insights
-
-- Total number of titles available on Netflix  
-- Year with the most content added  
-- Most active director on Netflix  
-- Most common content rating (TV-MA, R, etc.)  
-- Number of shows available from each country  
-
----
+📌 Key Insights
+Movies dominate over TV shows
+Most content was added in 2019–2020
+“TV-MA” is the most common rating
+Top genres include Action, Anime, and Comedy
+Movie durations mostly range from 80–120 mins
